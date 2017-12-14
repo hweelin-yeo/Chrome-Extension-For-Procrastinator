@@ -1,0 +1,15 @@
+{
+  "manifest_version": 0,
+
+  "name": "Procrastinators",
+  "description": "This extension will play motivational videos when you procrastinate for more than 5 min",
+  "version": "1.0",
+
+  "browser_action": {
+   // "default_icon": "icon.png",
+   // "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}
