@@ -1,14 +1,39 @@
 {
-  "manifest_version": 0,
-
   "name": "Procrastinators",
+  "version": "1.0", 
+  "manifest_version": 2,
   "description": "This extension will play motivational videos when you procrastinate for more than 5 min",
-  "version": "1.0",
 
-  "browser_action": {
-   // "default_icon": "icon.png",
-   // "default_popup": "popup.html"
-  },
+  "page_action": {
+    "default_icon": "icon.jpeg",
+    "default_popup": "popup.html",
+    "default_title": "I won't procrastinate!"
+  }, 
+  "background": {
+    "scripts": [
+    ]
+    },
+
+  // "options_page": "options.html",
+  "content_scripts": [
+  {
+    "matches": [
+    "https://www.facebook.com/*",
+    "http://www.facebook.com/*",
+    "http://www.reddit.com/*",
+    ],
+    "js": []
+    }],
+
+  "homepage_url": "https://github.com/hweelin-yeo/Chrome-Extension-For-Procrastinator",
+
+    
+
+  "icons": {
+    "16": "icon.jpeg",
+    "48": "icon.jpeg",
+    "128": "icon.jpeg"
+    },
   "permissions": [
    "activeTab"
    ]
