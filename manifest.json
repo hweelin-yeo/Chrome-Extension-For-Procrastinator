@@ -10,21 +10,20 @@
     "default_title": "I won't procrastinate!"
   }, 
   "background": {
-    "scripts": ["popup.js"]
+    "scripts": ["popup.js"],
+    "persistent": false
     },
 
   // "options_page": "options.html",
   "content_scripts": [
   {
     "matches": [
-    "*://*.facebook.com/*",
+    "*://*.facebook.com/*"
     ],
     "js": ["popup.js"]
     }],
 
-  "homepage_url": "https://github.com/hweelin-yeo/Chrome-Extension-For-Procrastinator",
-
-    
+  // "homepage_url": "https://github.com/hweelin-yeo/Chrome-Extension-For-Procrastinator",
 
   "icons": {
     "16": "icon.jpeg",
