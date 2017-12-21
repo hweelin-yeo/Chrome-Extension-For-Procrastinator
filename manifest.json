@@ -10,7 +10,7 @@
     "default_title": "I won't procrastinate!"
   }, 
   "background": {
-    "scripts": ["popup.js"],
+    "scripts": ["background.js"],
     "persistent": false
     },
 

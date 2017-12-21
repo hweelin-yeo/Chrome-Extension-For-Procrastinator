@@ -3,7 +3,7 @@
 'use strict';
 
 function setAlarm(event) {
-  let minutes = event.target.value;
+  let minutes = parseFloat(event.target.value);
   chrome.pageAction.setBadgeText({text: 'ON'});
   chrome.alarms.create({delayInMinutes: minutes});
   chrome.storage.sync.set({minutes: minutes});
