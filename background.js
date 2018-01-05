@@ -14,9 +14,6 @@ function noAlarmFB() {
   chrome.browserAction.setBadgeText({text: 'FB'});
 }
 
-function noAlarmNoFB() {
-  chrome.browserAction.setBadgeBackgroundColor({color: "#8B4513"});
-  chrome.browserAction.setBadgeText({text: ''});
 }
 
 function configureAlarm() {
@@ -25,7 +22,7 @@ function configureAlarm() {
         if (item.onAlarm == true && alarms.length == 0) {
           setAlarm();
         } else if (item.onAlarm == null || item.onAlarm == false) {
-          console.log("uhm");
+
           noAlarmFB();
         }
       });
@@ -33,9 +30,7 @@ function configureAlarm() {
 }
 
 function checkForValidUrl(tabId, changeInfo, tab) {
-  if (tab.url.indexOf("facebook") == -1) {
-    noAlarmNoFB();
-  } else {
+  if (tab.url.indexOf("facebook") != -1) {
     configureAlarm();
   };
 };
@@ -55,4 +50,5 @@ function playVideo() {
 
 // Listen for any changes to the URL of any tab.
 chrome.tabs.onUpdated.addListener(checkForValidUrl);
+chrome.alarms.onAlarm.addListener(playVideo);
 chrome.alarms.onAlarm.addListener(playVideo);
